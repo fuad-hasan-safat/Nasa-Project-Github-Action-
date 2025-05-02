@@ -1,0 +1,22 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install --prefix nodeserver && npm install --prefix client",
+    "server": "npm run watch --prefix nodeserver",
+    "client": "pm start --prefix client",
+    "watch": "npm run server & npm run client",
+    "deploy": "npm run build --prefix client && npm start --prefix nodeserver",
+    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix nodeserver",
+    "test": "npm run test --prefix nodeserver & npm run test --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "mongoose": "^8.14.0"
+  }
+}
