@@ -6,7 +6,6 @@ const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
 
-
 const start = async () => {
     try {
         await mongoConnect();
@@ -14,9 +13,6 @@ const start = async () => {
         server.listen(PORT, () => {
             console.log(`Nasa project Server is running on port ${PORT} and mongoose running`)
         })
-
-
-
     } catch (error) {
         console.error(error);
         console.log("MONGOOSE ERROR")
